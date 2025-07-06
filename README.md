@@ -6,7 +6,7 @@ Este é um projeto frontend desenvolvido com o objetivo de consumir API respons�
 
 Os eventos podem abranger diferentes modalidades, como caminhadas, passeios ciclísticos, corridas e outras atividades esportivas.
 
-![Imagem do aplicativo](https://example.com/logo.png)
+![Imagem do aplicativo](sprint_1.png)
 
 ## Integrantes
 
@@ -14,7 +14,7 @@ Os eventos podem abranger diferentes modalidades, como caminhadas, passeios cicl
 
 ## Tecnologias utilizadas:
 
-* HML;
+* HTML;
 * CSS;
 * Javascript
 
