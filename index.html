@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Gestão de Eventos Esportivos</title>
+</head>
+
+<body>
+    <div class="navbar mb-20">
+        <!-- transformar em menu nav -->
+        <div class="section-third">
+            <h3>MVP-SPRINT I</h3>
+        </div>
+        <div class="section-third">
+            <h3>Gestão de Eventos Esportivos</h3>
+        </div>
+        <div class="section-third">
+            <img class="icon-small p-10" src="img/icons/alt-menu-svgrepo-com.svg"
+                alt="Ícone de Listagem de Ficha Técnicas">
+            <h3>Eventos Esportivos</h3>
+        </div>
+    </div>
+    <div class="content rounded">
+        <div class="banner rounded-top">
+            <h2 class="title" id="title">Eventos Esportivos</h2>
+        </div>
+        <div class="section px-20">
+            <div class="collumn section-third">
+                <div class="row">
+                    <h2>Eventos:</h2>
+                </div>
+            </div>
+            <div class="collumn section-third">
+                <div class="row">
+                    <button class="btn btn-primary" onclick="showForm()">+ Novo Evento</button>
+                </div>
+            </div>
+        </div>
+        <section class="section px-20">
+            <div class="row col-12">
+                <table id="myTable">
+                    <tr>
+                        <th>Id</th>
+                        <th>Nome</th>
+                        <th>Data</th>
+                        <th>Ações</th>
+                    </tr>
+                </table>
+            </div>
+        </section>
+        <section class="section p-20 pb-20" id="visualizar-form" style="display: block;">
+            <form class="col-12 mb-20" id="form-evento">
+                <div class="row">
+                    <img class="icon-small mr-10" src="img/icons/tag-svgrepo-com.svg" alt="Precificação">
+                    <h3>Formulário de Evento:</h3>
+                </div>
+                <div class="form-row col-12">
+                    <div class="form-group col-9">
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" name="nome" required>
+                    </div>
+                    <div class="form-group col-2">
+                        <label for="data">Data:</label>
+                        <input type="date" id="data" name="data" required>
+                    </div>
+                </div>
+                <h4>Endereço</h4>
+                <div class="form-row col-12">
+                    <div class="form-group col-9">
+                        <label for="logradouro">Logradouro:</label>
+                        <input type="text" id="logradouro" name="logradouro" required>
+                    </div>
+                    <div class="form-group col-2">
+                        <label for="numero">Numero:</label>
+                        <input type="text" id="numero" name="numero" required>
+                    </div>
+                    <div class="form-group col-4">
+                        <label for="bairro">Bairro:</label>
+                        <input type="text" id="bairro" name="bairro" required>
+                    </div>
+                    <div class="form-group col-5">
+                        <label for="cidade">Cidade:</label>
+                        <input type="text" id="cidade" name="cidade" required>
+                    </div>
+                    <div class="form-group col-2">
+                        <label for="estado">Estado:</label>
+                        <select id="estado" name="estado" required>
+                            <option value="AC">Acre</option>
+                            <option value="AL">Alagoas</option>
+                            <option value="AP">Amapá</option>
+                            <option value="AM">Amazonas</option>
+                            <option value="BA">Bahia</option>
+                            <option value="CE">Ceará</option>
+                            <option value="DF">Distrito Federal</option>
+                            <option value="ES">Espírito Santo</option>
+                            <option value="GO">Goiás</option>
+                            <option value="MA">Maranhão</option>
+                            <option value="MT">Mato Grosso</option>
+                            <option value="MS">Mato Grosso do Sul</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="PA">Pará</option>
+                            <option value="PB">Paraíba</option>
+                            <option value="PR">Paraná</option>
+                            <option value="PE">Pernambuco</option>
+                            <option value="PI">Piauí</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="RN">Rio Grande do Norte</option>
+                            <option value="RS">Rio Grande do Sul</option>
+                            <option value="RO">Rondônia</option>
+                            <option value="RR">Roraima</option>
+                            <option value="SC">Santa Catarina</option>
+                            <option value="SP">São Paulo</option>
+                            <option value="SE">Sergipe</option>
+                            <option value="TO">Tocantins</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-6">
+                        <label for="complemento">Complemento:</label>
+                        <input type="text" id="complemento" name="complemento" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cep">Cep:</label>
+                        <input type="text" id="cep" name="cep" required>
+                    </div>
+                </div>
+                <h4>Trajeto</h4>
+                <div class="form-row col-12">
+                    <div class="form-group col-10">
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome_trajeto" name="nome" required>
+                    </div>
+                    <div class="form-group col-5">
+                        <label for="altimetria">Altimetria:</label>
+                        <input type="number" id="altimetria" name="altimetria" required>
+                    </div>
+                    <div class="form-group col-5">
+                        <label for="nivel_dificuldade">Nivel de Dificuldade:</label>
+                        <select id="nivel_dificuldade" name="nivel_dificuldade" required>
+                            <option value="Fácil">Fácil</option>
+                            <option value="Intermediário">Intermediário</option>
+                            <option value="Difícil">Difícil</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row col-12">
+                    <div class="form-group col-10">
+                        <label for="rota_imagem_link">Rota Imagem Link:</label>
+                        <input type="text" id="rota_imagem_link" name="rota_imagem_link" required>
+                    </div>
+                </div>
+                <div class="col-11 row btn-right">
+                    <button type="submit" onclick="addEvento(event)">Salvar Evento</button>
+                </div>
+            </form>
+        </section>
+        <section class="section p-20 pb-20" id="visualizar-evento" style="display: none;">
+            <div class="col-12">
+                <div class="row">
+                    <img class="icon-small mr-10" src="img/icons/eye-svgrepo-com.svg" alt="Precificação">
+                    <h3>Visualizar Evento:</h3>
+                </div>
+                <div class="row">
+                    <div id="visualizar-evento"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="footer mt-40">
+        <div class="content">
+            <p>Desenvolvido por <a href="https://github.com/piresthiago10/" target="_blank">Thiago Pires</a></p>
+            <a href="https://www.pexels.com/pt-br/foto/bicicleta-bike-bicicletas-atletas-4231503/"
+                target="_blank">Pexels</a> <br>
+            <a href="https://br.freepik.com/" target="_blank">Freepik</a>
+        </div>
+    </section>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
